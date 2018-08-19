@@ -198,6 +198,7 @@
     <Compile Include="Controllers\GigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TimesheetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -217,6 +218,38 @@
     <Compile Include="Migrations\201808141208027_PopluateGenreTable.Designer.cs">
       <DependentUpon>201808141208027_PopluateGenreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808180456327_addtimesheet.cs" />
+    <Compile Include="Migrations\201808180456327_addtimesheet.Designer.cs">
+      <DependentUpon>201808180456327_addtimesheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808180832105_addeiden.cs" />
+    <Compile Include="Migrations\201808180832105_addeiden.Designer.cs">
+      <DependentUpon>201808180832105_addeiden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808180836247_addeiden1.cs" />
+    <Compile Include="Migrations\201808180836247_addeiden1.Designer.cs">
+      <DependentUpon>201808180836247_addeiden1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808180924119_seeduser.cs" />
+    <Compile Include="Migrations\201808180924119_seeduser.Designer.cs">
+      <DependentUpon>201808180924119_seeduser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808181045002_addname.cs" />
+    <Compile Include="Migrations\201808181045002_addname.Designer.cs">
+      <DependentUpon>201808181045002_addname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808181121435_AddIP.cs" />
+    <Compile Include="Migrations\201808181121435_AddIP.Designer.cs">
+      <DependentUpon>201808181121435_AddIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808190430200_addViewModels.cs" />
+    <Compile Include="Migrations\201808190430200_addViewModels.Designer.cs">
+      <DependentUpon>201808190430200_addViewModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808190715156_Modefitdiff.cs" />
+    <Compile Include="Migrations\201808190715156_Modefitdiff.Designer.cs">
+      <DependentUpon>201808190715156_Modefitdiff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -224,9 +257,11 @@
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Timesheet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\GigFormViewModel.cs" />
+    <Compile Include="ViewModels\TimesheetFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -288,9 +323,19 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Gig\Create.cshtml" />
+    <Content Include="Views\Timesheet\Create.cshtml" />
+    <Content Include="Views\Timesheet\Index.cshtml" />
+    <Content Include="Views\Timesheet\Delete.cshtml" />
+    <Content Include="Views\Timesheet\Details.cshtml" />
+    <Content Include="Views\Timesheet\Edit.cshtml" />
+    <Content Include="Views\Timesheet\IndexAdmin.cshtml" />
+    <Content Include="Views\Timesheet\EditAdmin.cshtml" />
+    <Content Include="Views\Timesheet\EditView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -317,6 +362,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808141208027_PopluateGenreTable.resx">
       <DependentUpon>201808141208027_PopluateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808180456327_addtimesheet.resx">
+      <DependentUpon>201808180456327_addtimesheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808180832105_addeiden.resx">
+      <DependentUpon>201808180832105_addeiden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808180836247_addeiden1.resx">
+      <DependentUpon>201808180836247_addeiden1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808180924119_seeduser.resx">
+      <DependentUpon>201808180924119_seeduser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808181045002_addname.resx">
+      <DependentUpon>201808181045002_addname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808181121435_AddIP.resx">
+      <DependentUpon>201808181121435_AddIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190430200_addViewModels.resx">
+      <DependentUpon>201808190430200_addViewModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190715156_Modefitdiff.resx">
+      <DependentUpon>201808190715156_Modefitdiff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

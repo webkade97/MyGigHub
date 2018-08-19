@@ -7,7 +7,7 @@ namespace MyGigHub.Models
     {
         public DbSet<Gig> Gigs { get; set; }
         public DbSet<Genre> Genres { get; set; }
-
+        public DbSet<Timesheet> Timesheets { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -17,5 +17,7 @@ namespace MyGigHub.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<MyGigHub.ViewModel.TimesheetFormViewModel> TimesheetFormViewModels { get; set; }
     }
 }
