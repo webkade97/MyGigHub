@@ -5,9 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>پاک کردن</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>آیا اطمینان دارید؟</h3>
 <div>
     <h4>Timesheet</h4>
     <hr />
@@ -42,8 +42,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "IndexAdmin")
+            <input type="submit" value="حذف" class="btn btn-default" /> |
+            @Html.ActionLink("بازگشت", "IndexAdmin")
         </div>
     }
 </div>

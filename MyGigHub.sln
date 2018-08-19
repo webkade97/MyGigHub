@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGigHub", "MyGigHub\MyGigHub.csproj", "{397689C5-2EF0-4500-8A2F-33B6A5B1F1D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTimesheet", "MyGigHub\MyTimesheet.csproj", "{397689C5-2EF0-4500-8A2F-33B6A5B1F1D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
