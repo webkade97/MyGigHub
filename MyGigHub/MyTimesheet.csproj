@@ -198,6 +198,7 @@
     <Compile Include="Controllers\GigController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MyCartableController.cs" />
     <Compile Include="Controllers\TimesheetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -250,9 +251,22 @@
     <Compile Include="Migrations\201808190715156_Modefitdiff.Designer.cs">
       <DependentUpon>201808190715156_Modefitdiff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808200806133_Cartable.cs" />
+    <Compile Include="Migrations\201808200806133_Cartable.Designer.cs">
+      <DependentUpon>201808200806133_Cartable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808200824560_Cartable1.cs" />
+    <Compile Include="Migrations\201808200824560_Cartable1.Designer.cs">
+      <DependentUpon>201808200824560_Cartable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808200916026_updatereceiver.cs" />
+    <Compile Include="Migrations\201808200916026_updatereceiver.Designer.cs">
+      <DependentUpon>201808200916026_updatereceiver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Cartable.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -260,6 +274,7 @@
     <Compile Include="Models\Timesheet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CartableFormViewModel.cs" />
     <Compile Include="ViewModels\GigFormViewModel.cs" />
     <Compile Include="ViewModels\TimesheetFormViewModel.cs" />
   </ItemGroup>
@@ -331,6 +346,7 @@
     <Content Include="Views\Timesheet\IndexAdmin.cshtml" />
     <Content Include="Views\Timesheet\EditAdmin.cshtml" />
     <Content Include="Views\Timesheet\EditView.cshtml" />
+    <Content Include="Views\MyCartable\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,6 +402,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808190715156_Modefitdiff.resx">
       <DependentUpon>201808190715156_Modefitdiff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808200806133_Cartable.resx">
+      <DependentUpon>201808200806133_Cartable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808200824560_Cartable1.resx">
+      <DependentUpon>201808200824560_Cartable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808200916026_updatereceiver.resx">
+      <DependentUpon>201808200916026_updatereceiver.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
