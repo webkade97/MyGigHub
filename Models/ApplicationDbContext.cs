@@ -1,8 +1,13 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
+using System.Web;
 
 namespace MyGigHub.Models
 {
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Gig> Gigs { get; set; }
@@ -17,7 +22,5 @@ namespace MyGigHub.Models
         {
             return new ApplicationDbContext();
         }
-
-        public System.Data.Entity.DbSet<MyGigHub.ViewModel.TimesheetFormViewModel> TimesheetFormViewModels { get; set; }
     }
 }

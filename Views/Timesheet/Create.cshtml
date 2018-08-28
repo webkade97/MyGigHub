@@ -13,47 +13,22 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name, new {
-       @readonly = "readonly",
-       @class = "form-control" ,
-       @Value = @User.Identity.Name})
-        @Html.ValidationMessageFor(m => m.Name)
-    </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.IP)
-        @Html.TextBoxFor(m => m.IP, new {
-       @readonly = "readonly",
+        @Html.LabelFor(m => m.StartTime)
+        @Html.TextBoxFor(m => m.StartTime, new {
        @class = "form-control",
-       @Value = Request.UserHostAddress})
-        @Html.ValidationMessageFor(m => m.IP)
+       disabled = "disabled",
+       @Value = DateTime.Now })
+        @Html.ValidationMessageFor(m => m.StartTime)
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Date)
-        @Html.TextBoxFor(m => m.Date, new {
-       @class = "form-control"
-       @*
-       @readonly = "readonly",
-       @Value = string.Format("{0} {1} {2}", DateTime.Now.Day, DateTime.Now.Month,DateTime.Now.Year)
-  *@
-           })
-        @Html.ValidationMessageFor(m => m.Date)
+ @*   <div class="form-group">
+        @Html.LabelFor(m => m.EndTime)
+        @Html.TextBoxFor(m => m.EndTime, new { @class = "form-control", @Value = DateTime.Now })
+        @Html.ValidationMessageFor(m => m.EndTime)
     </div>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.TimeStart)
-        @Html.TextBoxFor(m => m.TimeStart, new { @readonly = "readonly", @class = "form-control", @Value = string.Format("{0}:{1}", DateTime.Now.Hour, DateTime.Now.Minute) })
-        @Html.ValidationMessageFor(m => m.TimeStart)
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(m => m.TimeEnd)
-        @Html.TextBoxFor(m => m.TimeEnd, new { disabled = "disabled", @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.TimeEnd)
-    </div>
+     *@
     <button type="submit" class="btn btn-primary">Save</button>
 
 

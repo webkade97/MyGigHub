@@ -1,6 +1,13 @@
-﻿@{
+﻿@model IEnumerable<MyGigHub.Models.Gig>
+@{
     ViewBag.Title = "Home Page";
 }
 
-
-
+<ul>
+    @foreach (var gig in Model)
+    {
+    <li>
+        @gig.DateTime - @gig.Artist.Name -@gig.Venue -@gig.Artist.UserName
+    </li>
+    }
+</ul>

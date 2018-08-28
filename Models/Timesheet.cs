@@ -1,16 +1,18 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
 namespace MyGigHub.Models
 {
     public class Timesheet
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public string Name { get; set; }
-
-        public string IP { get; set; }
+        public ApplicationUser Artist { get; set; }
+        [Required]
+        public string ArtistId { get; set; }
 
         public DateTime StartDay { get; set; }
 
@@ -18,11 +20,7 @@ namespace MyGigHub.Models
 
         public TimeSpan GetDifferenceTimes()
         {
-            return EndDay - StartDay;
+            return StartDay - EndDay;
         }
-
-        public string UserId { get; set; }
-        public virtual ApplicationUser ApplicationUser { get; set; }
-
     }
 }
